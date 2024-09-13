@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import style from './Register.module.css'
 import { useFormik} from 'formik'
 import * as Yup from "yup" 
 import axios from 'axios'
@@ -16,20 +15,16 @@ export default function Register() {
 
 let {setUserData}= useContext(UserContext)
 
-// ده هووك بيعمل تغيير مسار زي مثلا لما اعمل كليك عالسبميت يوديني للهووم
- let navigate= useNavigate()
+let navigate= useNavigate()
 
- 
-
-     //( api called-------------------------------------------)
 
         async function register(values) {
           
           try {
                   setLoading(true)
-                 let {data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`,values)
-               
-                 localStorage.setItem('userToken',data.token)
+                let {data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`,values)
+              
+                localStorage.setItem('userToken',data.token)
                   navigate('/home')
                   setUserData(data.token)
                 } catch (err) {

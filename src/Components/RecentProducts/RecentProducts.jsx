@@ -23,7 +23,7 @@ function getProducts(){
  let {data,isFetching,isLoading,isError,error}= useQuery({
     queryKey : ['recentProduct'],
     queryFn : getProducts,
-    gcTime:3000
+    gcTime:4000
   })
 console.log(data?.data.data);
 
