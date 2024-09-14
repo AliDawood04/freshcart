@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import style from './Loding.module.css'
+import React from 'react'
 import { DNA } from 'react-loader-spinner'
 
 export default function Loding() {

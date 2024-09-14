@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import style from './RecentProducts.module.css'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext';
 import { useQuery } from '@tanstack/react-query';

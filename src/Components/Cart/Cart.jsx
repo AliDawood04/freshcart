@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
-import style from './Cart.module.css'
+import React, { useContext, useEffect } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import Loding from '../Loding/Loding'
 import { Link } from 'react-router-dom'
-import Checkout from '../checkout/checkout'
 
 export default function Cart() {
 

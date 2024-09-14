@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import style from './Login.module.css'
 import { useFormik} from 'formik'
 import * as Yup from "yup" 
 import axios from 'axios'
@@ -15,12 +14,12 @@ export default function login() {
   const [loading, setLoading] = useState(false)
 
 let {setUserData}=useContext(UserContext)
-// ده هووك بيعمل تغيير مسار زي مثلا لما اعمل كليك عالسبميت يوديني للهووم
+
 let navigate= useNavigate()
 
 
 
-     //( api called-------------------------------------------)
+
 
         async function login(values) {
           
@@ -41,15 +40,15 @@ let navigate= useNavigate()
             
         }
 
-  // (------end api called_________________________)
 
 
-  // (yupاختصار للregax--------------)
+
+  
   let validationSchema=Yup.object().shape({
     email:Yup.string().email("invalid email").required("email is requrid"),
     password:Yup.string().matches(/^[A-Z]\w{5,10}$/,"invalid password example Ali2004").required("password is requrid"),
   })
-  //( end Yup----------------)
+  
   
 let formik =useFormik({
   initialValues:{

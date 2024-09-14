@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
-import style from './Navbar.module.css'
+import React, { useContext } from 'react'
 import logo from '../../assets/images/freshcart-logo.svg'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { UserContext } from '../../Context/UserContext'
 import { CartContext } from '../../Context/CartContext'
 
 export default function Navbar() {
+
 
 
   let navigate=useNavigate();
